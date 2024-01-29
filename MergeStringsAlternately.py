@@ -40,3 +40,28 @@ class Solution(object):
         :type word2: str
         :rtype: str
         """
+        result = ""
+        i, j = 0, 0
+        
+        while i < len(word1) and j < len(word2):
+            result += word1[i] + word2[j]
+            i += 1
+            j += 1
+        
+        # Append the remaining characters from word1, if any
+        result += word1[i:]
+        
+        # Append the remaining characters from word2, if any
+        result += word2[j:]
+        
+        return result
+
+# Example usage:
+solution = Solution()
+output1 = solution.mergeAlternately("abc", "pqr")
+output2 = solution.mergeAlternately("ab", "pqrs")
+output3 = solution.mergeAlternately("abcd", "pq")
+
+print(output1)  # Output: "apbqcr"
+print(output2)  # Output: "apbqrs"
+print(output3)  # Output: "apbqcd"

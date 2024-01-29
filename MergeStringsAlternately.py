@@ -32,3 +32,11 @@
 
 # 1 <= word1.length, word2.length <= 100
 # word1 and word2 consist of lowercase English letters.
+
+class Solution(object):
+    def mergeAlternately(self, word1, word2):
+        """
+        :type word1: str
+        :type word2: str
+        :rtype: str
+        """

@@ -43,3 +43,6 @@ class Solution:
             digit = x % 10
             reversed_number = reversed_number * 10 + digit
             x //= 10
+
+          # For a palindrome, the reversed number should match the original number
+        return original_number == reversed_number

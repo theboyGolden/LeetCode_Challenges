@@ -29,3 +29,9 @@
 # Constraints:
 
 # -231 <= x <= 231 - 1
+
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        # Check if the number is negative or ends with zero
+        if x < 0 or (x % 10 == 0 and x != 0):
+            return False

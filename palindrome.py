@@ -1,7 +1,4 @@
-# 9. Palindrome Number
-# Easy
-# Topics
-# Companies
+# Palindrome Number
 # Hint
 # Given an integer x, return true if x is a 
 # palindrome

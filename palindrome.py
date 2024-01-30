@@ -46,3 +46,10 @@ class Solution:
 
           # For a palindrome, the reversed number should match the original number
         return original_number == reversed_number
+    
+
+    # Example usage:
+solution = Solution()
+print(solution.isPalindrome(121))    # Output: True
+print(solution.isPalindrome(-121))   # Output: False
+print(solution.isPalindrome(10))      # Output: False

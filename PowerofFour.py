@@ -23,3 +23,6 @@
 # Constraints:
 
 # -231 <= n <= 231 - 1
+
+class Solution:
+    def isPowerOfFour(self, n: int) -> bool:

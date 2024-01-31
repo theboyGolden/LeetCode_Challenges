@@ -32,3 +32,4 @@ class Solution:
 solution = Solution()
 print(solution.isPowerOfFour(16))  # Output: True
 print(solution.isPowerOfFour(5))   # Output: False
+print(solution.isPowerOfFour(1))   # Output: True

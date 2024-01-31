@@ -28,3 +28,7 @@ class Solution:
     def isPowerOfFour(self, n: int) -> bool:
         # Check if n is positive and a power of two
         return n > 0 and (n & (n - 1)) == 0 and (n - 1) % 3 == 0
+    # Example usage:
+solution = Solution()
+print(solution.isPowerOfFour(16))  # Output: True
+print(solution.isPowerOfFour(5))   # Output: False

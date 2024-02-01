@@ -49,3 +49,7 @@
 # 0 <= nums.length <= 100
 # 0 <= nums[i] <= 50
 # 0 <= val <= 100
+
+
+class Solution {
+    public int removeElement(int[] nums, int val) {

@@ -36,3 +36,9 @@ def length_of_longest_substring(s: str) -> int:
 
         char_index[char] = i
         max_length = max(max_length, i - start + 1)
+        return max_length
+
+# Test the function
+s = "abcabcbb"
+result = length_of_longest_substring(s)
+print(result)

@@ -25,3 +25,8 @@
 # - The function should return an integer representing the length of the longest substring without repeating characters.
 
 # Implement the `length_of_longest_substring` function to solve this task. This may involve using techniques such as the sliding window approach. Good luck!
+
+
+def length_of_longest_substring(s: str) -> int:
+    char_index = {}
+    start = max_length = 0

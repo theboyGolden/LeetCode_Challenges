@@ -47,3 +47,12 @@ def maxSumAfterPartitioning(arr, k):
 arr1, k1 = [1, 15, 7, 9, 2, 5, 10], 3
 arr2, k2 = [1, 4, 1, 5, 7, 3, 6, 1, 9, 9, 3], 4
 arr3, k3 = [1], 1
+
+
+output1 = maxSumAfterPartitioning(arr1, k1)
+output2 = maxSumAfterPartitioning(arr2, k2)
+output3 = maxSumAfterPartitioning(arr3, k3)
+
+print(output1)  # Output: 84
+print(output2)  # Output: 83
+print(output3)  # Output: 1

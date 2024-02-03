@@ -43,3 +43,7 @@ def maxSumAfterPartitioning(arr, k):
             dp[i] = max(dp[i], (dp[i - j] if i - j >= 0 else 0) + max_val * j)
 
     return dp[-1]
+# Test the function
+arr1, k1 = [1, 15, 7, 9, 2, 5, 10], 3
+arr2, k2 = [1, 4, 1, 5, 7, 3, 6, 1, 9, 9, 3], 4
+arr3, k3 = [1], 1

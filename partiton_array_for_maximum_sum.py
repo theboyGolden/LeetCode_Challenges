@@ -29,3 +29,12 @@
 # 1 <= arr.length <= 500
 # 0 <= arr[i] <= 109
 # 1 <= k <= arr.length
+
+
+
+def maxSumAfterPartitioning(arr, k):
+    n = len(arr)
+    dp = [0] * n
+
+    for i in range(n):
+        max_val = float('-inf')

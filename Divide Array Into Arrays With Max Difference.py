@@ -34,3 +34,9 @@
 # n is a multiple of 3.
 # 1 <= nums[i] <= 105
 # 1 <= k <= 105
+
+
+def divideArray(nums, k):
+    n = len(nums)
+    if n % 3 != 0:
+        return []

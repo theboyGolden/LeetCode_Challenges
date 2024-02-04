@@ -40,3 +40,14 @@ def divideArray(nums, k):
     n = len(nums)
     if n % 3 != 0:
         return []
+    nums.sort()  # Sort the array in ascending order
+    result = []
+
+    for i in range(0, n, 3):
+        group = [nums[i], nums[i + 1], nums[i + 2]]
+
+        # Check the condition for the difference between any two elements in the group
+        if group[2] - group[0] > k:
+            return []
+
+        result.append(group)

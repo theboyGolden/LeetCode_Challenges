@@ -51,3 +51,14 @@ def divideArray(nums, k):
             return []
 
         result.append(group)
+    return result
+
+# Test the function with the provided examples
+nums1, k1 = [1, 3, 4, 8, 7, 9, 3, 5, 1], 2
+nums2, k2 = [1, 3, 3, 2, 7, 3], 3
+
+output1 = divideArray(nums1, k1)
+output2 = divideArray(nums2, k2)
+
+print(output1)  # Output: [[1, 1, 3], [3, 4, 5], [7, 8, 9]]
+print(output2)  # Output: []

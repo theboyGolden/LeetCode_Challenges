@@ -29,14 +29,24 @@ def firstUniqChar(s):
     # Count the frequency of each character in the string
     for char in s:
         char_frequency[char] = char_frequency.get(char, 0) + 1
-        # Iterate through the string to find the first unique character
+
+    # Iterate through the string to find the first unique character
     for i, char in enumerate(s):
         if char_frequency[char] == 1:
             return i
-        # If no unique character is found, return -1
+
+    # If no unique character is found, return -1
     return -1
 
 # Test the function with the provided examples
 s1 = "leetcode"
 s2 = "loveleetcode"
 s3 = "aabb"
+
+output1 = firstUniqChar(s1)
+output2 = firstUniqChar(s2)
+output3 = firstUniqChar(s3)
+
+print(output1)  # Output: 0
+print(output2)  # Output: 2
+print(output3)  # Output: -1

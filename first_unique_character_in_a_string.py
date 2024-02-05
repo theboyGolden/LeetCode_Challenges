@@ -33,3 +33,10 @@ def firstUniqChar(s):
     for i, char in enumerate(s):
         if char_frequency[char] == 1:
             return i
+        # If no unique character is found, return -1
+    return -1
+
+# Test the function with the provided examples
+s1 = "leetcode"
+s2 = "loveleetcode"
+s3 = "aabb"

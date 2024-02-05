@@ -29,3 +29,7 @@ def firstUniqChar(s):
     # Count the frequency of each character in the string
     for char in s:
         char_frequency[char] = char_frequency.get(char, 0) + 1
+        # Iterate through the string to find the first unique character
+    for i, char in enumerate(s):
+        if char_frequency[char] == 1:
+            return i

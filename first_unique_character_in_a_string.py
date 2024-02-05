@@ -22,3 +22,10 @@
 
 # 1 <= s.length <= 105
 # s consists of only lowercase English letters.
+
+def firstUniqChar(s):
+    char_frequency = {}
+
+    # Count the frequency of each character in the string
+    for char in s:
+        char_frequency[char] = char_frequency.get(char, 0) + 1

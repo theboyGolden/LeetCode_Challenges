@@ -27,3 +27,13 @@
 # 1 <= strs.length <= 104
 # 0 <= strs[i].length <= 100
 # strs[i] consists of lowercase English letters.
+
+
+
+def groupAnagrams(strs):
+    anagrams = {}
+    
+    # Iterate through each word in the input array
+    for word in strs:
+        # Sort the characters of the word and use it as a key in the dictionary
+        sorted_word = ''.join(sorted(word))

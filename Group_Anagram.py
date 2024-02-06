@@ -47,3 +47,16 @@ def groupAnagrams(strs):
     
     # Convert the values of the dictionary to a list and return the result
     return list(anagrams.values())
+
+# Test the function with the provided examples
+strs1 = ["eat","tea","tan","ate","nat","bat"]
+strs2 = [""]
+strs3 = ["a"]
+
+output1 = groupAnagrams(strs1)
+output2 = groupAnagrams(strs2)
+output3 = groupAnagrams(strs3)
+
+print(output1)  # Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+print(output2)  # Output: [[""]]
+print(output3)  # Output: [["a"]]

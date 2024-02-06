@@ -37,3 +37,13 @@ def groupAnagrams(strs):
     for word in strs:
         # Sort the characters of the word and use it as a key in the dictionary
         sorted_word = ''.join(sorted(word))
+
+         # If the sorted word is already in the dictionary, append the word to its list of anagrams
+        if sorted_word in anagrams:
+            anagrams[sorted_word].append(word)
+        else:
+            # Otherwise, create a new entry in the dictionary with the sorted word as the key
+            anagrams[sorted_word] = [word]
+    
+    # Convert the values of the dictionary to a list and return the result
+    return list(anagrams.values())

@@ -32,3 +32,12 @@
 
 # 1 <= s.length <= 5 * 105
 # s consists of uppercase and lowercase English letters and digits.
+
+
+def frequencySort(s):
+    char_frequency = {}
+    
+    # Count the frequency of each character in the string
+    for char in s:
+        char_frequency[char] = char_frequency.get(char, 0) + 1
+    

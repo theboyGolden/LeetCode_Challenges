@@ -47,3 +47,16 @@ def frequencySort(s):
     sorted_string = ''.join(char * char_frequency[char] for char in sorted_chars)
     
     return sorted_string
+
+# Test the function with the provided examples
+s1 = "tree"
+s2 = "cccaaa"
+s3 = "Aabb"
+
+output1 = frequencySort(s1)
+output2 = frequencySort(s2)
+output3 = frequencySort(s3)
+
+print(output1)  # Output: "eert"
+print(output2)  # Output: "aaaccc"
+print(output3)  # Output: "bbAa"

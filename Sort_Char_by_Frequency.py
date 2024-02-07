@@ -40,4 +40,10 @@ def frequencySort(s):
     # Count the frequency of each character in the string
     for char in s:
         char_frequency[char] = char_frequency.get(char, 0) + 1
+    # Sort the characters based on their frequency in decreasing order
+    sorted_chars = sorted(char_frequency.keys(), key=lambda x: char_frequency[x], reverse=True)
     
+    # Construct the sorted string
+    sorted_string = ''.join(char * char_frequency[char] for char in sorted_chars)
+    
+    return sorted_string

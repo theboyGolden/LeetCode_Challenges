@@ -32,4 +32,8 @@ def largestDivisibleSubset(nums):
         return []
     
     nums.sort()
-    
+    n = len(nums)
+    dp = [1] * n
+    prev_index = [-1] * n
+    max_length = 1
+    max_length = 0

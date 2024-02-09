@@ -36,4 +36,14 @@ def largestDivisibleSubset(nums):
     dp = [1] * n
     prev_index = [-1] * n
     max_length = 1
-    max_length = 0
+    max_index = 0
+
+
+    for i in range(n):
+            for j in range(i):
+                if nums[i] % nums[j] == 0 and dp[j] + 1 > dp[i]:
+                    dp[i] = dp[j] + 1
+                    prev_index[i] = j
+                    if dp[i] > max_length:
+                        max_length = dp[i]
+                        max_index = i

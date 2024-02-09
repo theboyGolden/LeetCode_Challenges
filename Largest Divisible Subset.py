@@ -47,3 +47,16 @@ def largestDivisibleSubset(nums):
                     if dp[i] > max_length:
                         max_length = dp[i]
                         max_index = i
+                        result = []
+    while max_index != -1:
+        result.append(nums[max_index])
+        max_index = prev_index[max_index]
+
+    return result[::-1]
+
+# Test cases
+nums1 = [1, 2, 3]
+nums2 = [1, 2, 4, 8]
+
+print(largestDivisibleSubset(nums1))  # Output: [1, 2] or [1, 3]
+print(largestDivisibleSubset(nums2))  # Output: [1, 2, 4, 8]

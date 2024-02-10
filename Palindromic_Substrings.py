@@ -37,3 +37,10 @@ def countSubstrings(s: str) -> int:
             left -= 1
             right += 1
         return count
+    count = 0
+    for i in range(len(s)):
+        # Case 1: Odd-length palindromes
+        count += expandAroundCenter(i, i)
+        # Case 2: Even-length palindromes
+        count += expandAroundCenter(i, i + 1)
+    return count

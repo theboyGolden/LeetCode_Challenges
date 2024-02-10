@@ -44,3 +44,10 @@ def countSubstrings(s: str) -> int:
         # Case 2: Even-length palindromes
         count += expandAroundCenter(i, i + 1)
     return count
+
+# Test cases
+s1 = "abc"
+s2 = "aaa"
+
+print(countSubstrings(s1))  # Output: 3
+print(countSubstrings(s2))  # Output: 6

@@ -14,3 +14,10 @@
 # When both robots stay in the same cell, only one takes the cherries.
 # Both robots cannot move outside of the grid at any moment.
 # Both robots should reach the bottom row in grid.
+
+
+def cherryPickup(grid):
+    rows, cols = len(grid), len(grid[0])
+    
+    # Initialize dp array with -1
+    dp = [[[-1] * cols for _ in range(cols)] for _ in range(rows)]

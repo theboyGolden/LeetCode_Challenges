@@ -21,14 +21,31 @@ def cherryPickup(grid):
     
     # Initialize dp array with -1
     dp = [[[-1] * cols for _ in range(cols)] for _ in range(rows)]
-
+    
     def dfs(row, col1, col2):
         # Base case: if out of bounds or already visited
         if row == rows or col1 < 0 or col1 >= cols or col2 < 0 or col2 >= cols:
             return 0
-         # If already calculated, return the result
+        
+        # If already calculated, return the result
         if dp[row][col1][col2] != -1:
             return dp[row][col1][col2]
         
         # Current cell cherries
         cherries = grid[row][col1] + (grid[row][col2] if col1 != col2 else 0)
+        
+        # Maximum cherries from three possible moves
+        max_cherries = 0
+        for d1 in [-1, 0, 1]:
+            for d2 in [-1, 0, 1]:
+                max_cherries = max(max_cherries, dfs(row + 1, col1 + d1, col2 + d2))
+        
+        # Update dp array
+        dp[row][col1][col2] = cherries + max_cherries
+        return dp[row][col1][col2]
+    
+    return dfs(0, 0, cols - 1)
+
+# Test case
+grid = [[3, 1, 1], [2, 5, 1], [1, 5, 5], [2, 1, 1]]
+print(cherryPickup(grid))  # Output: 24

@@ -26,3 +26,9 @@ def cherryPickup(grid):
         # Base case: if out of bounds or already visited
         if row == rows or col1 < 0 or col1 >= cols or col2 < 0 or col2 >= cols:
             return 0
+         # If already calculated, return the result
+        if dp[row][col1][col2] != -1:
+            return dp[row][col1][col2]
+        
+        # Current cell cherries
+        cherries = grid[row][col1] + (grid[row][col2] if col1 != col2 else 0)

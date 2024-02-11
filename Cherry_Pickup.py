@@ -21,3 +21,8 @@ def cherryPickup(grid):
     
     # Initialize dp array with -1
     dp = [[[-1] * cols for _ in range(cols)] for _ in range(rows)]
+
+    def dfs(row, col1, col2):
+        # Base case: if out of bounds or already visited
+        if row == rows or col1 < 0 or col1 >= cols or col2 < 0 or col2 >= cols:
+            return 0

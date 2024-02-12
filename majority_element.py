@@ -31,9 +31,16 @@ def majorityElement(nums):
         if count == 0:
             candidate = num
             count += 1
-            elif num == candidate:
+        elif num == candidate:
             count += 1
         else:
             count -= 1
     
     return candidate
+
+# Test cases
+nums1 = [3, 2, 3]
+nums2 = [2, 2, 1, 1, 1, 2, 2]
+
+print(majorityElement(nums1))  # Output: 3
+print(majorityElement(nums2))  # Output: 2

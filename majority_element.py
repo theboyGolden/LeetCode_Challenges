@@ -21,3 +21,13 @@
 # n == nums.length
 # 1 <= n <= 5 * 104
 # -109 <= nums[i] <= 109
+
+
+def majorityElement(nums):
+    candidate = None
+    count = 0
+    
+    for num in nums:
+        if count == 0:
+            candidate = num
+            count += 1

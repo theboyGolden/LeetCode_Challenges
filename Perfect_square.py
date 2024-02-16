@@ -31,3 +31,13 @@ def numSquares(n):
     # Initialize dp array
     dp = [float('inf')] * (n + 1)
     dp[0] = 0
+
+
+     # Iterate from 1 to n
+    for i in range(1, n + 1):
+        # Iterate through perfect squares less than or equal to i
+        for j in range(1, int(math.sqrt(i)) + 1):
+            # Update dp[i]
+            dp[i] = min(dp[i], dp[i - j*j] + 1)
+    
+    return dp[n]

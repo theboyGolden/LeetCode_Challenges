@@ -23,3 +23,11 @@
 # Constraints:
 
 # 1 <= n <= 104
+
+
+import math
+
+def numSquares(n):
+    # Initialize dp array
+    dp = [float('inf')] * (n + 1)
+    dp[0] = 0

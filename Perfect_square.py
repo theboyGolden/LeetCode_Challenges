@@ -41,3 +41,7 @@ def numSquares(n):
             dp[i] = min(dp[i], dp[i - j*j] + 1)
     
     return dp[n]
+
+# Test cases
+print(numSquares(12))  # Output: 3
+print(numSquares(13))  # Output: 2

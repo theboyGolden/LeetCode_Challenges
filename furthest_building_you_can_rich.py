@@ -40,3 +40,12 @@
 # 1 <= heights[i] <= 106
 # 0 <= bricks <= 109
 # 0 <= ladders <= heights.length
+
+
+import heapq
+
+def furthestBuilding(heights, bricks, ladders):
+    pq = []  # min-heap to store the differences between buildings' heights
+    for i in range(len(heights) - 1):
+        diff = heights[i + 1] - heights[i]
+        if diff > 0:

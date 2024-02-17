@@ -49,3 +49,15 @@ def furthestBuilding(heights, bricks, ladders):
     for i in range(len(heights) - 1):
         diff = heights[i + 1] - heights[i]
         if diff > 0:
+            heapq.heappush(pq, diff)
+            if len(pq) > ladders:  # If we have more differences than ladders
+                bricks -= heapq.heappop(pq)
+                if bricks < 0:
+                    return i  # Return the furthest building index
+    return len(heights) - 1  # Return the last building index if we reach here
+
+# Example usage:
+heights1 = [4,2,7,6,9,14,12]
+bricks1 = 5
+ladders1 = 1
+print(furthestBuilding(heights1, bricks1, ladders1))  # Output: 4

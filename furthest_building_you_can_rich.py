@@ -61,3 +61,15 @@ heights1 = [4,2,7,6,9,14,12]
 bricks1 = 5
 ladders1 = 1
 print(furthestBuilding(heights1, bricks1, ladders1))  # Output: 4
+
+heights2 = [4,12,2,7,3,18,20,3,19]
+bricks2 = 10
+ladders2 = 2
+print(furthestBuilding(heights2, bricks2, ladders2))  # Output: 7
+
+heights3 = [14,3,19,3]
+bricks3 = 17
+ladders3 = 0
+print(furthestBuilding(heights3, bricks3, ladders3))  # Output: 3
+
+
